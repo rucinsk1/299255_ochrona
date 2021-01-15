@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{content}}'s session</title>
+    </head>
+    <body>
+        <p><b>Public notes:</b></p>
+        {% for x in public_notes %}
+            <p>{{x}}</p>
+        {% endfor %}
+        <p><b>Private notes:</b></p>
+        {% for x in private_notes %}
+            <p>{{x}}</p>
+        {% endfor %}
+        <form action = "#" method = "post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <p><input type="Submit", value ="logout"/> </p>
+            <p><a href = "/note" role = button> <button type="button">Add note</button></a></p>
+        </form>
+    </body>
+</html>

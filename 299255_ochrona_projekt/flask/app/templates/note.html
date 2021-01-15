@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <form action = "#" method = "post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <h1>Add new note for user: {{content}}</h1>
+        Public
+        <input type="checkbox" id="public" name="public" checked>
+        <br>
+        Max length of note: 1000 characters
+        <p> <textarea id="content" name="content" rows="4" cols="50" maxlength="1000"> </textarea></p>
+        <p><input type="submit", value ="submit"/> </p>
+        <p><a href = "/user" role = button> <button type="button">back</button></a></p>
+    </form>
+</html>

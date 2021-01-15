@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    {{content}}
+    <form action = "#" method = "post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        Login:
+        <p><input type='text' id='username' name='username'></p>
+        Password (min 8 letters and entropy >3):
+        <p><input type='password' id='pass' name='password' minlength='8' required></p> <!-- minlength='8' required-->
+        Confirm password:
+        <p><input type='password' id='pass2' name='password2' minlength='8' required></p> <!-- minlength='8' required-->
+        <p><input type="submit", value ="register"/> </p>
+    </form>
+    <p><a href = "/" role = button> <button type="button">back</button></a></p>
+    <!--<button type="button">Register</button>-->
+</html>

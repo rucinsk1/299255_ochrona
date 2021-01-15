@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    Pozostałe próby logowania: {{content}}
+    <form action = "#" method = "post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        Login:
+        <p><input type='text' id='username' name='username'></p>
+        Password:
+        <p><input type='password' id='pass' name='password' minlength='8' required></p> <!-- -->
+        <p><input type="submit", value ="submit"/> </p>
+        <p><a href = "/register" role = button> <button type="button">Register</button></a></p>
+    </form>
+    <!--<button type="button">Register</button>-->
+</html>
